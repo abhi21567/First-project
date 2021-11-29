@@ -18,10 +18,14 @@ const forecast = (a, b, callback) => {
       const description = response.body.current.weather_descriptions[0]
       const temperature = response.body.current.temperature
       const feelslike = response.body.current.feelslike
+      const humidity = response.body.current.humidity
+      const is_day = response.body.current.is_day
       callback(undefined,{
           weather_description: description,
         temperature: temperature,
-        feelslike: feelslike
+        feelslike: feelslike,
+        humidity:humidity,
+        is_day:is_day
       }) 
     }
    

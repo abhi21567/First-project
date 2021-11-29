@@ -20,6 +20,8 @@ document.querySelector('form').addEventListener('submit',(e) => {
            document.getElementById('2').innerHTML = ''
            document.getElementById('3').innerHTML = ''
            document.getElementById('4').innerHTML = ''
+           document.getElementById('5').innerHTML = ''
+           document.getElementById('6').innerHTML = ''
         }
         else
         {
@@ -27,6 +29,8 @@ document.querySelector('form').addEventListener('submit',(e) => {
             document.getElementById('2').innerHTML = 'temperature: ' + data.temperature
             document.getElementById('3').innerHTML = 'feelslike: ' + data.feelslike
             document.getElementById('4').innerHTML = 'location: ' + data.location
+            document.getElementById('5').innerHTML = 'humidity: ' + data.humidity 
+            document.getElementById('6').innerHTML = 'is_day: ' + data.is_day 
             document.getElementById('error').innerHTML = ''
         }
     })
