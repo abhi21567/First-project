@@ -6,12 +6,12 @@ document.querySelector('form').addEventListener('submit',(e) => {
     //will prevent the browser reloaing after form submission
     e.preventDefault()
     const address = document.querySelector('input').value
-    if(address==="")
+    if(address === "")
    return  console.log('you must provide address')
      
    document.getElementById('error').innerHTML = 'Loading...'
 
-    fetch('http://localhost:3000/weather?address='+address).then((res) => {
+    fetch('/weather?address='+address).then((res) => {
         return res.json()
     }).then((data) => {
         if(data.error){
